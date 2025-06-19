@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introdução ao HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3{
+      color: #2c3e50;
+    }
+    blockquote {
+      background-color: #e0e0e0;
+      border-left: 5px solid #888;
+      padding: 10px 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 30px 0;
+    }
+    table, th, td {
+      border: 1px solid #666;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meu resumo sobre HTML</h1>
+  <p>Nessa página vou registrar os meus conhecimentos sobre <strong>HTML</strong>!</p>
+
+  <h2>O que é HTML?</h2>
+  <p><mark>HTML</mark> <i>(HyperText Markup Language)</i> é uma linguagem de marcação de hipertexto. É usado para estruturar páginas na web.</p>
+
+  <h3>Estrutura Básica</h3>
+  <p>Essa é a estrutura que um documento HTML deve possuir:</p>
+  <blockquote>
+    <!--as entidades HTML interpretam o texto como código para mostrar na tela--> 
+    <code>
+      &lt;!DOCTYPE html&gt;<br />
+      &lt;html&gt;<br />
+      &nbsp;&nbsp;&lt;head&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Título&lt;/title&gt;<br />
+      &nbsp;&nbsp;&lt;/head&gt;<br />
+      &nbsp;&nbsp;&lt;body&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Cabeçalho&lt;/h1&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Parágrafo&lt;/p&gt;<br />
+      &nbsp;&nbsp;&lt;/body&gt;<br />
+      &lt;/html&gt;
+    </code>
+  </blockquote>
+
+  <h3>HTML Básico</h3>
+  <p>Dentre os elementos que englobam o HTML básico, temos:</p>
+  <ul>
+    <li>&lt;p&gt;: parágrafos</li>
+    <li>&lt;a&gt;: links</li>
+    <li>&lt;img&gt;: imagens</li>
+    <li>&lt;ul&gt; e &lt;ol&gt;: listas</li>
+  </ul>
+
+  <h3>Listas em HTML</h3>
+  <p>O HTML possui dois tipos principais de listas:</p>
+  <ol>
+    <li>Listas ordenadas (numeradas)</li>
+    <li>Listas não ordenadas (com marcadores)</li>
+  </ol>
+
+  <h3>Outros elementos</h3>
+  <p>
+    <u>Texto sublinhado</u>, <strong>texto forte</strong> e <i>itálico</i> são usados para dar destaque.<br />
+    Também podemos usar <sub>subscrito</sub> e <sup>sobrescrito</sup>.
+  </p>
+
+  <hr />
+
+  <h2>Atributos HTML</h2>
+  <p>Elementos HTML podem ter <strong>atributos</strong> que fornecem informações adicionais:</p>
+  <pre>
+    &lt;a href="https://dio.me" target="_blank"&gt;Visite a DIO&lt;/a&gt;
+    &lt;img src="nome-imagem.jpg" alt="Descrição"&gt;
+  </pre>
+  <ul>
+    <li><strong>href</strong>: destino do link</li>
+    <li><strong>src</strong>: caminho da imagem</li>
+    <li><strong>alt</strong>: descrição da imagem</li>
+    <li><strong>target</strong>: como abrir (ex: nova aba)</li>
+  </ul>
+
+  <h2>Tags Semânticas em HTML</h2>
+  <p>Essas tags explicam a função do conteúdo:</p>
+  <ul>
+    <li><code>&lt;header&gt;</code></li>
+    <li><code>&lt;nav&gt;</code></li>
+    <li><code>&lt;main&gt;</code></li>
+    <li><code>&lt;section&gt;</code></li>
+    <li><code>&lt;article&gt;</code></li>
+    <li><code>&lt;aside&gt;</code></li>
+    <li><code>&lt;footer&gt;</code></li>
+  </ul>
+
+  <article>
+    <h3>Exemplo de Article</h3>
+    <p>Esse é um conteúdo independente dentro de um artigo.</p>
+  </article>
+
+  <h2>Tabelas em HTML</h2>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+    <tr>
+      <td>Maria</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>Carlos</td>
+      <td>34</td>
+    </tr>
+  </table>
+
+  <h2>Formulários HTML</h2>
+  <form action="/enviar" method="post">
+    <label for="nome">Nome:</label><br />
+    <input type="text" id="nome" name="nome"><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email"><br /><br />
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h2>Comentários</h2>
+  <p>Comentários não aparecem na tela:</p>
+  <pre>
+    &lt;!-- Este é um comentário --&gt;
+  </pre>
+
+  <hr />
+
+  <p><small>Referências com outros conteúdos HTML:</small></p>
+
+  <ul>
+    <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3Schools</a></li>
+    <li><a href="https://www.dio.me" target="_blank">DIO (Digital Innovation One)</a></li>
+  </ul>
+
+</body>
+</html>
