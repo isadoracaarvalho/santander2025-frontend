@@ -12,7 +12,7 @@
       color: #333;
       line-height: 1.6;
     }
-    h1, h2, h3{
+    h1, h2, h3 {
       color: #2c3e50;
     }
     blockquote {
@@ -43,16 +43,33 @@
 </head>
 <body>
 
-  <h1>Meu resumo sobre HTML</h1>
-  <p>Nessa página vou registrar os meus conhecimentos sobre <strong>HTML</strong>!</p>
+  <h1>Meu resumo sobre <strong>HTML</strong></h1>
+  <p>Nessa página vou registrar os meus conhecimentos sobre <abbr title="HyperText Markup Language">HTML</abbr>!</p>
 
-  <h2>O que é HTML?</h2>
+  <nav>
+    <h2>Sumário</h2>
+    <ul>
+      <li><a href="#html">O que é HTML?</a></li>
+      <li><a href="#estrutura">Estrutura Básica</a></li>
+      <li><a href="#basico">HTML Básico</a></li>
+      <li><a href="#listas">Listas em HTML</a></li>
+      <li><a href="#outros">Outros elementos</a></li>
+      <li><a href="#atributos">Atributos HTML</a></li>
+      <li><a href="#semanticas">Tags Semânticas</a></li>
+      <li><a href="#tabelas">Tabelas em HTML</a></li>
+      <li><a href="#formularios">Formulários HTML</a></li>
+      <li><a href="#comentarios">Comentários</a></li>
+    </ul>
+  </nav>
+
+  <hr />
+
+  <h2 id="html">O que é HTML?</h2>
   <p><mark>HTML</mark> <i>(HyperText Markup Language)</i> é uma linguagem de marcação de hipertexto. É usado para estruturar páginas na web.</p>
 
-  <h3>Estrutura Básica</h3>
+  <h3 id="estrutura">Estrutura Básica</h3>
   <p>Essa é a estrutura que um documento HTML deve possuir:</p>
   <blockquote>
-    <!--as entidades HTML interpretam o texto como código para mostrar na tela--> 
     <code>
       &lt;!DOCTYPE html&gt;<br />
       &lt;html&gt;<br />
@@ -67,7 +84,7 @@
     </code>
   </blockquote>
 
-  <h3>HTML Básico</h3>
+  <h3 id="basico">HTML Básico</h3>
   <p>Dentre os elementos que englobam o HTML básico, temos:</p>
   <ul>
     <li>&lt;p&gt;: parágrafos</li>
@@ -76,14 +93,14 @@
     <li>&lt;ul&gt; e &lt;ol&gt;: listas</li>
   </ul>
 
-  <h3>Listas em HTML</h3>
+  <h3 id="listas">Listas em HTML</h3>
   <p>O HTML possui dois tipos principais de listas:</p>
   <ol>
     <li>Listas ordenadas (numeradas)</li>
     <li>Listas não ordenadas (com marcadores)</li>
   </ol>
 
-  <h3>Outros elementos</h3>
+  <h3 id="outros">Outros elementos</h3>
   <p>
     <u>Texto sublinhado</u>, <strong>texto forte</strong> e <i>itálico</i> são usados para dar destaque.<br />
     Também podemos usar <sub>subscrito</sub> e <sup>sobrescrito</sup>.
@@ -91,7 +108,7 @@
 
   <hr />
 
-  <h2>Atributos HTML</h2>
+  <h2 id="atributos">Atributos HTML</h2>
   <p>Elementos HTML podem ter <strong>atributos</strong> que fornecem informações adicionais:</p>
   <pre>
     &lt;a href="https://dio.me" target="_blank"&gt;Visite a DIO&lt;/a&gt;
@@ -104,7 +121,7 @@
     <li><strong>target</strong>: como abrir (ex: nova aba)</li>
   </ul>
 
-  <h2>Tags Semânticas em HTML</h2>
+  <h2 id="semanticas">Tags Semânticas em HTML</h2>
   <p>Essas tags explicam a função do conteúdo:</p>
   <ul>
     <li><code>&lt;header&gt;</code></li>
@@ -121,7 +138,7 @@
     <p>Esse é um conteúdo independente dentro de um artigo.</p>
   </article>
 
-  <h2>Tabelas em HTML</h2>
+  <h2 id="tabelas">Tabelas em HTML</h2>
   <table>
     <tr>
       <th>Nome</th>
@@ -137,7 +154,7 @@
     </tr>
   </table>
 
-  <h2>Formulários HTML</h2>
+  <h2 id="formularios">Formulários HTML</h2>
   <form action="/enviar" method="post">
     <label for="nome">Nome:</label><br />
     <input type="text" id="nome" name="nome"><br /><br />
@@ -148,7 +165,7 @@
     <input type="submit" value="Enviar">
   </form>
 
-  <h2>Comentários</h2>
+  <h2 id="comentarios">Comentários</h2>
   <p>Comentários não aparecem na tela:</p>
   <pre>
     &lt;!-- Este é um comentário --&gt;
@@ -157,7 +174,6 @@
   <hr />
 
   <p><small>Referências com outros conteúdos HTML:</small></p>
-
   <ul>
     <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3Schools</a></li>
     <li><a href="https://www.dio.me" target="_blank">DIO (Digital Innovation One)</a></li>
