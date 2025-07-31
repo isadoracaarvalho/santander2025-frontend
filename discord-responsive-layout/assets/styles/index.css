@@ -1,0 +1,146 @@
+.header {
+    height: 459px;
+    background: url(../images/header-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.header h1 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 56px;
+
+    width: 313px;
+    height: 112px;
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.header p {
+    width: 757px;
+    height: 66px;
+
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.button1,
+.button2 {
+    height: 44px;
+
+    border: none;
+    border-radius: 28px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.button1 {
+    width: 205px;
+    padding-right: 5px;
+
+    background-color: #FFFFFF;
+    color: #23272A;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: #020142;
+    color: #FFFFFF;
+}
+
+.button2 {
+    width: 281px;
+    padding-left: 5px;
+
+    background-color: #23272A;
+    color: #FFFFFF;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 0;
+
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-txt {
+    max-width: 348px;
+    max-height: 374px;
+
+    padding: 10px 0 15px 0;
+}
+
+.section-txt h2 {
+    color: #23272A;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.section2,
+.section4 {
+    background-color: #F6F6F6;
+}
+
+.section4 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section4 .section-txt {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section4 .section-txt h2,
+.section4 .section-txt p {
+    width: 100%;
+    max-width: 802px;
+}
+
+.section4 .section-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    height: 134px;
+    background-color: #23272A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
