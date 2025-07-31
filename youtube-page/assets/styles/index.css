@@ -1,3 +1,7 @@
+.header {
+    background-color: #FFFFFF;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -13,7 +17,41 @@
     gap: 24px;
 }
 
+.search {
+    display: flex;
+    flex-direction: row;
+}
 
+.search-bar {
+    width: 348px;
+    height: 40px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+}
+
+.search-bar:focus {
+    border-color: #1c62b9;
+    outline: none;
+}
+
+.search-button {
+    height: 40px;
+    width: 40px;
+
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #CCCCCC;
+}
+
+.search-button img {
+    max-width: 18px;
+    max-height: 18px;
+}
 
 .icon img {
     width: 40px;
