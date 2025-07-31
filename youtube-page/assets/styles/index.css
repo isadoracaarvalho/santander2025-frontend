@@ -59,12 +59,19 @@
 }
 
 .main {
-    max-width: 952px;
-    margin: 28px 16px 5px 75px;
+    margin: 28px 16px 5px 60px;
     gap: 16px;
 
     display: flex;
+    flex-direction: row;
+}
+
+.main-content {
+    max-width: 952px;
+
+    display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .watching-video h1 {
@@ -127,6 +134,10 @@
     border: none;
 }
 
+.subscribe-button:hover {
+    background-color: #940000;
+}
+
 .reaction-container {
     height: 24px;
     max-width: 115px;
@@ -151,4 +162,38 @@
     letter-spacing: 0%;
 
     padding: 10px 0;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+
+    width: 160px;
+    height: 100%;
+    gap: 16px;
+}
+
+.video-container {
+    width: 310px;
+    height: 89px;
+
+    gap: 5px;
+
+    display: flex;
+}
+
+.video-info h2 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.video-info p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    padding: 8px 0;
 }
