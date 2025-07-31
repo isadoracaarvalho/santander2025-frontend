@@ -1,5 +1,8 @@
 .header {
     background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header-content {
@@ -59,7 +62,7 @@
 }
 
 .main {
-    margin: 28px 16px 5px 60px;
+    margin: 95px 16px 5px 55px;
     gap: 16px;
 
     display: flex;
