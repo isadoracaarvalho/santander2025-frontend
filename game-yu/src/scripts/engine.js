@@ -11,6 +11,13 @@ const state = {
         type: document.getElementById("card-type")
     },
 
+    playerSides: {
+        player1: "player-cards" ,
+        player1BOX: document.querySelector(".card-box.framed#player-cards"),
+        computer: "computer-cards",
+        computerBOX: document.querySelector(".card-box.framed#computer-cards")
+    },
+
     fieldCards: {
         player: document.getElementById("player-field-card"),
         computer: document.getElementById("computer-field-card")
@@ -21,11 +28,6 @@ const state = {
     }
 
 };
-
-const playerSides = {
-    player1: "player-cards" ,
-    computer: "computer-cards"    
-}
 
 const cardData = [
     {
@@ -96,6 +98,16 @@ async function setCardField(cardId) {
 
     await updateScore();
     await drawButton(duelResult);
+}
+
+async function removeAllCardsImages() {
+    let cards = state.playerSides.computerBOX;
+    let imgElements = cards.querySelector("img");
+    imgElements.forEach(img => img.remove());
+
+    cards = state.playerSides.player1BOX;
+    imgElements = cards.querySelector("img");
+    imgElements.forEach(img => img.remove());
 }
 
 async function drawSelectCard(index) {
