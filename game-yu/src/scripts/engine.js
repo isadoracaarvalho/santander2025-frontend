@@ -13,9 +13,9 @@ const state = {
 
     playerSides: {
         player1: "player-cards" ,
-        player1BOX: document.querySelector(".card-box.framed#player-cards"),
+        player1BOX: document.querySelector("#player-cards"),
         computer: "computer-cards",
-        computerBOX: document.querySelector(".card-box.framed#computer-cards")
+        computerBOX: document.querySelector("#computer-cards")
     },
 
     fieldCards: {
@@ -58,7 +58,7 @@ const cardData = [
     },
 ]
 
-async function getRandomCardId(params) {
+async function getRandomCardId() {
     const randomIndex = Math.floor(Math.random() * cardData.length);
     return cardData[randomIndex].id;
 }
@@ -70,7 +70,7 @@ async function createCardImage(randomIdCard, fieldSide) {
     cardImage.setAttribute("data-id", randomIdCard);
     cardImage.classList.add("card");
 
-    if(fieldSide === playerSides.player1) {
+    if(fieldSide === state.playerSides.player1) {
         cardImage.addEventListener("mouseover", ()=> {
             drawSelectCard(randomIdCard);
         });
@@ -128,11 +128,11 @@ async function checkDuelResult(cardId, computerCardId) {
 
 async function removeAllCardsImages() {
     let cards = state.playerSides.computerBOX;
-    let imgElements = cards.querySelector("img");
+    let imgElements = cards.querySelectorAll("img");
     imgElements.forEach(img => img.remove());
 
     cards = state.playerSides.player1BOX;
-    imgElements = cards.querySelector("img");
+    imgElements = cards.querySelectorAll("img");
     imgElements.forEach(img => img.remove());
 }
 
@@ -162,8 +162,8 @@ async function resetDuel() {
 }
 
 function init() {
-    drawCards(5, playerSides.player1),
-    drawCards(5, playerSides.computer)
+    drawCards(5, state.playerSides.player1);
+    drawCards(5, state.playerSides.computer);
 }
 
 init();
