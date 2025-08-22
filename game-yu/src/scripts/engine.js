@@ -69,16 +69,39 @@ async function createCardImage(randomIdCard, fieldSide) {
     cardImage.classList.add("card");
 
     if(fieldSide === playerSides.player1) {
+        cardImage.addEventListener("mouseover", ()=> {
+            drawSelectCard(randomIdCard);
+        });
+
         cardImage.addEventListener("click", ()=> {
             setCardField(cardImage.getAttribute("data-id"));
         });
     }
 
-    cardImage.addEventListener("mouseover", ()=> {
-        drawSelectCard(idCard);
-    });
-
     return cardImage;
+}
+
+async function setCardField(cardId) {
+    await removeAllCardsImages();
+
+    let computerCardId = await getRandomCardId();
+
+    state.fieldCards.player.style.display = "block";
+    state.fieldCards.computer.style.display = "block";
+
+    state.fieldCards.player.src = cardData[cardId].img;
+    state.fieldCards.computer.src = cardData[computerCardId].img;
+
+    let duelResult = await checkDuelResult(cardId, computerCardId);
+
+    await updateScore();
+    await drawButton(duelResult);
+}
+
+async function drawSelectCard(index) {
+    state.cardSprites.avatar.src = cardData[index].img;
+    state.cardSprites.name.innerText = cardData[index].name;
+    state.cardSprites.type.innerText = "Attribute : " + cardData[index].type;
 }
 
 async function drawCards(cardNumbers, fieldSide) {
